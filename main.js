@@ -193,7 +193,7 @@ $(document).ready(function() {
     ctx.translate(-20, -20);
 
     if (obj.dead == true) {
-      ctx.drawImage(sheet, 171, 119, 20, 20, 0, 0, 40, 40);
+    //  ctx.drawImage(sheet, 171, 119, 20, 20, 0, 0, 40, 40);
     } else {
       if (t % 0.8 < 0.2) {
         ctx.drawImage(sheet, 262, 60, 20, 20, 0, 0, 40, 40);
@@ -256,10 +256,10 @@ $(document).ready(function() {
       var U = (Math.cos(a) * 100 * (Math.random()+1));
       var V = (Math.sin(a) * 100 * (Math.random()+1));
       
-      addPart(obj.x, obj.y, 
-              U,V,
-              0.5+Math.random(), 
-              (Math.random() < 0.5 ? drawDot : drawBigDot));
+     // addPart(obj.x, obj.y, 
+     //         U,V,
+     //         0.5+Math.random(), 
+     //         (Math.random() < 0.5 ? drawDot : drawBigDot));
     }
     
   }
@@ -409,7 +409,7 @@ $(document).ready(function() {
             return;
           }
           var d = dist(o.x-o2.x, o.y-o2.y);
-          if (d < 20) {
+          if (d < 16) {
             killBird(o);
             killBird(o2);
           }
